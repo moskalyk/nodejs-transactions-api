@@ -6,7 +6,7 @@
     "scripts": {
         "start:client": "cd client && npm install && npm run dev",
         "start:server:dev": "cd server && npm install && node ./node_modules/.bin/nodemon server.ts",
-        "start:server": "CI=false cd server && npm install && node ./node_modules/.bin/ts-node server.ts",
+        "start:server": "CI=false && cd server && npm install && node ./node_modules/.bin/ts-node server.ts",
         "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
         "start:dev": "concurrently \"npm run start:server:dev\" \"npm run start:client\""
     },
